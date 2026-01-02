@@ -8,6 +8,9 @@ package curl
 #cgo linux,amd64 CFLAGS: -I${SRCDIR}/libs/include -DCURL_STATICLIB
 #cgo linux,amd64 LDFLAGS: -L${SRCDIR}/libs/linux_amd64_gnu -Wl,-Bstatic -lcurl-impersonate -Wl,-Bdynamic -lssl -lcrypto -lngtcp2_crypto_boringssl -lngtcp2 -lnghttp3 -lnghttp2 -lzstd -lbrotlienc -lbrotlidec -lbrotlicommon -lz -lstdc++ -ldl -lpthread
 
+#cgo linux,arm64 CFLAGS: -I${SRCDIR}/libs/include -DCURL_STATICLIB
+#cgo linux,arm64 LDFLAGS: -L${SRCDIR}/libs/linux_arm64_gnu -Wl,-Bstatic -lcurl-impersonate -Wl,-Bdynamic -lssl -lcrypto -lngtcp2_crypto_boringssl -lngtcp2 -lnghttp3 -lnghttp2 -lzstd -lbrotlienc -lbrotlidec -lbrotlicommon -lz -lcares -lstdc++ -ldl -lpthread
+
 #include <stdlib.h>
 
 static char *string_array_index(char **p, int i) {
