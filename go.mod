@@ -1,4 +1,4 @@
-module github.com/BridgeSenseDev/go-curl-impersonate
+module github.com/gmcabrita/go-curl-impersonate
 
 go 1.24.2
 
